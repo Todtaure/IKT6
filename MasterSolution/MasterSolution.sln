@@ -1,0 +1,46 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DOA", "DOA", "{E953C7FC-9D8D-466F-BB4E-13FC501D259D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "KPU", "KPU", "{E1913A50-4564-422A-9006-863EC3D7B490}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Lab0", "Lab0\Lab0.vcxproj", "{C5BDF478-7A9A-49A1-A4A2-2A528E406509}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Lesson01", "Lesson01", "{1195B60F-7A09-4616-B8DB-47747BFF3F1D}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Library", "Library\Library.vcxproj", "{49430066-8FB4-4215-A81C-3F98A38EB01C}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ConsoleTester", "ConsoleTester\ConsoleTester.vcxproj", "{22DCD246-86B1-443A-86B4-11D16621A459}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C5BDF478-7A9A-49A1-A4A2-2A528E406509}.Debug|Win32.ActiveCfg = Debug|Win32
+		{C5BDF478-7A9A-49A1-A4A2-2A528E406509}.Debug|Win32.Build.0 = Debug|Win32
+		{C5BDF478-7A9A-49A1-A4A2-2A528E406509}.Release|Win32.ActiveCfg = Release|Win32
+		{C5BDF478-7A9A-49A1-A4A2-2A528E406509}.Release|Win32.Build.0 = Release|Win32
+		{49430066-8FB4-4215-A81C-3F98A38EB01C}.Debug|Win32.ActiveCfg = Debug|Win32
+		{49430066-8FB4-4215-A81C-3F98A38EB01C}.Debug|Win32.Build.0 = Debug|Win32
+		{49430066-8FB4-4215-A81C-3F98A38EB01C}.Release|Win32.ActiveCfg = Release|Win32
+		{49430066-8FB4-4215-A81C-3F98A38EB01C}.Release|Win32.Build.0 = Release|Win32
+		{22DCD246-86B1-443A-86B4-11D16621A459}.Debug|Win32.ActiveCfg = Debug|Win32
+		{22DCD246-86B1-443A-86B4-11D16621A459}.Debug|Win32.Build.0 = Debug|Win32
+		{22DCD246-86B1-443A-86B4-11D16621A459}.Release|Win32.ActiveCfg = Release|Win32
+		{22DCD246-86B1-443A-86B4-11D16621A459}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{C5BDF478-7A9A-49A1-A4A2-2A528E406509} = {E953C7FC-9D8D-466F-BB4E-13FC501D259D}
+		{1195B60F-7A09-4616-B8DB-47747BFF3F1D} = {E1913A50-4564-422A-9006-863EC3D7B490}
+		{49430066-8FB4-4215-A81C-3F98A38EB01C} = {1195B60F-7A09-4616-B8DB-47747BFF3F1D}
+		{22DCD246-86B1-443A-86B4-11D16621A459} = {1195B60F-7A09-4616-B8DB-47747BFF3F1D}
+	EndGlobalSection
+EndGlobal
