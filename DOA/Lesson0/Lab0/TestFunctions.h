@@ -32,7 +32,7 @@ private:
 			}
 		}
 
-		ratio = (float)successCount / N;
+		ratio = (float)successCount / (float)N;
 
 		return ratio * 4;
 	}
