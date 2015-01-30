@@ -10,7 +10,7 @@
 #define LIBRARY_API __declspec(dllimport)
 #endif
 
-#include <string>
+#include "stdafx.h"
 
 // This class is exported from the Library.dll
 class LIBRARY_API CLibrary {
@@ -23,6 +23,6 @@ extern LIBRARY_API int nLibrary;
 
 LIBRARY_API int fnLibrary(void);
 
-int sumInt32(int first, int second);
-std::string concatString(std::string first, std::string second);
-char* concatChar(char first, char second);
+extern "C" LIBRARY_API int sumInt32(int first, int second);
+extern "C" LIBRARY_API std::string concatString(std::string first, std::string second);
+extern "C" LIBRARY_API char* concatChar(char first, char second);
