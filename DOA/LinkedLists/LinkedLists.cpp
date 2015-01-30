@@ -2,6 +2,7 @@
 //
 
 #include "stdafx.h"
+#include "LLToolKit.h"
 
 
 int _tmain(int argc, _TCHAR* argv[])
