@@ -4,7 +4,7 @@ class Node
 public:
 	Node(int i = 0, Node* n = nullptr)
 		:info(i), next(n){}
-	~Node();
+	~Node(){};
 
 	int info;
 	Node* next;
