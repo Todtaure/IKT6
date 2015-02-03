@@ -34,6 +34,11 @@ int _tmain(int argc, _TCHAR* argv[])
 
 	funcName = "DeleteDllObject";
 	deletePtr = (PFNDelete)GetProcAddress(dllHandle, funcName);	
+
+	if (createPtr == NULL || deletePtr == NULL)
+	{
+		return 1;
+	}
 	
 	return 0;
 }

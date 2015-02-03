@@ -1,0 +1,18 @@
+// ATLMathServer.idl : IDL source for ATLMathServer
+//
+
+// This file will be processed by the MIDL tool to
+// produce the type library (ATLMathServer.tlb) and marshalling code.
+
+import "oaidl.idl";
+import "ocidl.idl";
+
+[
+	uuid(E2C02F80-C805-440E-A95E-92608CBA5E04),
+	version(1.0),
+]
+library ATLMathServerLib
+{
+	importlib("stdole2.tlb");
+};
+
