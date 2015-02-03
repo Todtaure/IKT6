@@ -12,12 +12,18 @@
 
 void LLToolKit::headinsert(Node*& headRef, int info)
 {
-	headRef = new Node(info, headRef);
+	headRef = new Node(info, headRef);	
 }
 
 void LLToolKit::headRemove(Node*& headRef)
 {
-	headRef = headRef->next; //missing delete statement?
+	if(headRef == NULL)
+	{
+		return;
+	}
+	Node* tmp = headRef;
+	headRef = headRef->next;
+	delete tmp;
 }
 
 void LLToolKit::insert(Node* prevNodePtr, int info)
