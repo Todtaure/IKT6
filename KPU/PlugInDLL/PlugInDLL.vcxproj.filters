@@ -24,10 +24,7 @@
     <ClInclude Include="targetver.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="DLLCreator.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="AppUtilImp.h">
+    <ClInclude Include="CAppUtilImp.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

@@ -13,6 +13,10 @@
   <ItemGroup>
     <ClInclude Include="CAppUtil.h" />
     <ClInclude Include="CDLLclass.h" />
+    <ClInclude Include="stdafx.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="stdafx.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{08C82ECB-DDC9-4B05-9133-EB69B926E75C}</ProjectGuid>

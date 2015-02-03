@@ -4,11 +4,15 @@
 #include "stdafx.h"
 #include <iostream>
 #include "..\Lab2_headers\CAppUtil.h"
+#include "..\Lab2_headers\CDLLclass.h"
 
 int _tmain(int argc, _TCHAR* argv[])
 {
-	typedef bool(*PFNInit) (CAppUtil);
-	PFNInit initPtr;
+	typedef CDLLclass(*PFNCreate) (void);
+	PFNCreate createPtr;
+
+	typedef void(*PFNDelete) (CDLLclass);
+	PFNDelete deletePtr;
 
 
 	std::wstring libraryName;
@@ -25,9 +29,11 @@ int _tmain(int argc, _TCHAR* argv[])
 		return 1;
 	}
 
-	char* funcName = "Init";
-	initPtr = (PFNInit)GetProcAddress(dllHandle, funcName);
-	
+	char* funcName = "CreateDllObject";
+	createPtr = (PFNCreate)GetProcAddress(dllHandle, funcName);
+
+	funcName = "DeleteDllObject";
+	deletePtr = (PFNDelete)GetProcAddress(dllHandle, funcName);	
 	
 	return 0;
 }
