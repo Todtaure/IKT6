@@ -86,14 +86,13 @@ public:
 
 	static Node<int>* build(int* values, std::size_t n)
 	{
-		if (n < 0)
+		if (n == 0)
 		{
 			return NULL;
 		}
 
 		return new Node<int>(*(values + (n - 1)), build(values, n - 1));
 	}
-
 	
 };
 
