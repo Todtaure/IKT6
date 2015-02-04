@@ -12,17 +12,6 @@
 
 #include "stdafx.h"
 
-// This class is exported from the Library.dll
-class LIBRARY_API CLibrary {
-public:
-	CLibrary(void);
-	// TODO: add your methods here.
-};
-
-extern LIBRARY_API int nLibrary;
-
-LIBRARY_API int fnLibrary(void);
-
-extern "C" LIBRARY_API int sumInt32(int first, int second);
+extern "C" LIBRARY_API int sumInt(int first, int second);
 extern "C" LIBRARY_API std::string concatString(std::string first, std::string second);
-extern "C" LIBRARY_API char* concatChar(char first, char second);
+extern "C" LIBRARY_API char* concatChar(char* first, char* second);
