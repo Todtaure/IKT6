@@ -38,6 +38,11 @@ void LLToolKit::remove(Node* prevNodePtr)
 
 Node* LLToolKit::copy(Node* sourcePtr)
 {
+	if (sourcePtr == NULL)
+	{
+		return NULL;
+	}
+
 	Node* newHead = new Node(sourcePtr->info, NULL);
 	Node* current = newHead;
 
