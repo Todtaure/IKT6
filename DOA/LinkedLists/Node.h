@@ -1,12 +1,14 @@
 #pragma once
+
+template <typename T>
 class Node
 {
 public:
-	Node(int i = 0, Node* n = nullptr)
+	Node(T i = T(), Node* n = nullptr)
 		:info(i), next(n){}
-	~Node(){};
+	~Node(){}
 
-	int info;
+	T info;
 	Node* next;
 };
 
