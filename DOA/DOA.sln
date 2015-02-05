@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
-VisualStudioVersion = 12.0.31101.0
+VisualStudioVersion = 12.0.21005.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Lesson0", "Lesson0", "{82429863-32EC-4393-9EBB-E8527FC017FA}"
 EndProject
@@ -12,6 +12,8 @@ EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "LinkedLists", "LinkedLists\LinkedLists.vcxproj", "{1189552E-7A15-43F2-B4C6-5EDD43B17AC2}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Lesson2.1+2.2", "Lesson2.1+2.2", "{4BE0F3D2-5BEC-44CD-B6DB-2AEB81C4FE2F}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "PriorityQueue", "PriorityQueue\PriorityQueue.vcxproj", "{29A942DD-F0FC-4CD3-B9D9-6F87F0DB9C7B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{1189552E-7A15-43F2-B4C6-5EDD43B17AC2}.Debug|Win32.Build.0 = Debug|Win32
 		{1189552E-7A15-43F2-B4C6-5EDD43B17AC2}.Release|Win32.ActiveCfg = Release|Win32
 		{1189552E-7A15-43F2-B4C6-5EDD43B17AC2}.Release|Win32.Build.0 = Release|Win32
+		{29A942DD-F0FC-4CD3-B9D9-6F87F0DB9C7B}.Debug|Win32.ActiveCfg = Debug|Win32
+		{29A942DD-F0FC-4CD3-B9D9-6F87F0DB9C7B}.Debug|Win32.Build.0 = Debug|Win32
+		{29A942DD-F0FC-4CD3-B9D9-6F87F0DB9C7B}.Release|Win32.ActiveCfg = Release|Win32
+		{29A942DD-F0FC-4CD3-B9D9-6F87F0DB9C7B}.Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -34,5 +40,6 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{C5BDF478-7A9A-49A1-A4A2-2A528E406509} = {82429863-32EC-4393-9EBB-E8527FC017FA}
 		{1189552E-7A15-43F2-B4C6-5EDD43B17AC2} = {24FEDED2-1A80-4574-AE4D-59B5330C37C2}
+		{29A942DD-F0FC-4CD3-B9D9-6F87F0DB9C7B} = {4BE0F3D2-5BEC-44CD-B6DB-2AEB81C4FE2F}
 	EndGlobalSection
 EndGlobal

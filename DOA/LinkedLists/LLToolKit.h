@@ -27,6 +27,10 @@ public:
 
 	static void insert(Node<T>* prevNodePtr, T info)	// O(1)
 	{
+		if (prevNodePtr == nullptr)
+		{
+			return;
+		}
 		Node<T>* tmpPtr = prevNodePtr->next;
 		prevNodePtr->next = new Node<T>(info, tmpPtr);
 	}
