@@ -7,22 +7,15 @@
 #include "PriorityQueue.h"
 
 void RunExercise3();
+void RunExercise4();
 
 int _tmain(int argc, _TCHAR* argv[])
 {
-	PriorityQueue<int>* priorityQueue = new PriorityQueue<int>();
+	//RunExercise3();
 
-	priorityQueue->push(25, priorityQueue->LOW);
-	priorityQueue->push(25, priorityQueue->MED_LOW);
-	priorityQueue->push(25, priorityQueue->MED);
-	priorityQueue->push(25, priorityQueue->MED_LOW);
-	priorityQueue->push(25, priorityQueue->MED_HIGH);
-	priorityQueue->push(25, priorityQueue->HIGH);
-
-
+	RunExercise4();
 
 	getchar();
-
 
 	return 0;
 }
@@ -45,3 +38,39 @@ void RunExercise3()
 	std::cout << queue->isEmpty() << std::endl;
 }
 
+void RunExercise4() 
+{
+	PriorityQueue<int>* priorityQueue = new PriorityQueue<int>();
+
+	std::cout << "Checking if queue is empty (1=true, 0=false): " << priorityQueue->isEmpty() << std::endl;
+
+	std::cout << "Pushing elements..." << std::endl;
+	priorityQueue->push(21, priorityQueue->LOW);
+	priorityQueue->push(22, priorityQueue->MED_LOW);
+	priorityQueue->push(23, priorityQueue->MED);
+	priorityQueue->push(24, priorityQueue->MED_LOW);
+	priorityQueue->push(25, priorityQueue->MED_HIGH);
+	priorityQueue->push(26, priorityQueue->HIGH);
+
+	std::cout << "Checking if queue is empty after elements pushed(1=true, 0=false): " << priorityQueue->isEmpty() << std::endl;
+
+	std::cout << "Checking the first element and then popping:" << priorityQueue->front() << std::endl;
+	priorityQueue->pop();
+
+	std::cout << "Checking the first element and then popping:" << priorityQueue->front() << std::endl;
+	priorityQueue->pop();
+
+	std::cout << "Checking the first element and then popping:" << priorityQueue->front() << std::endl;
+	priorityQueue->pop();
+
+	std::cout << "Checking the first element and then popping:" << priorityQueue->front() << std::endl;
+	priorityQueue->pop();
+
+	std::cout << "Checking the first element and then popping:" << priorityQueue->front() << std::endl;
+	priorityQueue->pop();
+
+	std::cout << "Checking the first element and then popping:" << priorityQueue->front() << std::endl;
+	priorityQueue->pop();
+
+	std::cout << "Checking if queue is empty (1=true, 0=false): " << priorityQueue->isEmpty() << std::endl;
+}
