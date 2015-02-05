@@ -3,7 +3,6 @@
 
 #include "stdafx.h"
 #include "LLToolKit.h"
-#include <iostream>
 
 template <typename T> void printAllNodes(Node<T>* head);
 
@@ -15,7 +14,7 @@ int _tmain(int argc, _TCHAR* argv[])
 {
 	std::cout << "Initilizing Linked Lists console application..." << std::endl;
 	
-	runExerciseThree();
+	//runExerciseThree();
 	runExerciseSix();
 
 	getchar();
@@ -25,11 +24,26 @@ int _tmain(int argc, _TCHAR* argv[])
 
 void runExerciseSix()
 {
+	//MAIN LIST
+	Node<int>* head = new Node<int>(1, new Node<int>(2, new Node<int>(3, new Node<int>(4, NULL))));
+
+	std::cout << std::endl;
+	//LLToolKit<int>::print
+	std::cout << "TEST -- LLToolKit<int>::print..." << std::endl;
+	std::cout << "Print list..." << std::endl;
+	LLToolKit<int>::print(head);
+
+	std::cout << std::endl;
+	//LLToolKit<int>::reverse
+	std::cout << "TEST -- LLToolKit<int>::reverse..." << std::endl;
+	std::cout << "Reverse list..." << std::endl;
+	//LLToolKit<int>::reverse(head);
+	printAllNodes(head);
+
 	std::cout << std::endl;
 	//LLToolKit<int>::split
 	std::cout << "TEST -- LLToolKit<int>::split..." << std::endl;
-	std::cout << "Split between 2 and 3" << std::endl;
-	Node<int>* head = new Node<int>(1, new Node<int>(2, new Node<int>(3, new Node<int>(4, NULL))));
+	std::cout << "Split between 2 and 3" << std::endl;	
 	Node<int>* secHead = LLToolKit<int>::split(head->next);
 	std::cout << "First list: " << std::endl;
 	printAllNodes(head);
@@ -44,6 +58,28 @@ void runExerciseSix()
 	int* valPtr = values;	
 	Node<int>* result = LLToolKit<int>::build(valPtr, sizeof(valPtr));
 	printAllNodes(result);	
+
+	std::cout << std::endl;
+	//LLToolKit<int>::join
+	std::cout << "TEST -- LLToolKit<int>::join..." << std::endl;
+	std::cout << "Join List {1,2} with {5,6}" << std::endl;
+	Node<int>* joinNode = new Node<int>(5, new Node<int>(6, NULL));
+	LLToolKit<int>::join(head, joinNode);
+	printAllNodes(head);
+
+	std::cout << std::endl;
+	//LLToolKit<int>::rotateLeft
+	std::cout << "TEST -- LLToolKit<int>::rotateLeft..." << std::endl;
+	std::cout << "Rotate list left {1,2,5,6} -> {2,5,6,1}" << std::endl;
+	LLToolKit<int>::rotateLeft(head);
+	printAllNodes(head);
+
+	std::cout << std::endl;
+	//LLToolKit<int>::rotateRight
+	std::cout << "TEST -- LLToolKit<int>::rotateRight..." << std::endl;
+	std::cout << "Rotate list right {2,5,6,1} -> {1,2,5,6}" << std::endl;
+	LLToolKit<int>::rotateRight(head);
+	printAllNodes(head);
 }
 
 void runExerciseThree()
