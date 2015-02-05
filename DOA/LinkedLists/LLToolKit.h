@@ -1,4 +1,5 @@
 #pragma once
+#include "stdafx.h"
 #include "Node.h"
 
 template <typename T>
@@ -19,7 +20,7 @@ public:
 		{
 			return;
 		}
-		Node<T>* tmp = headRef; //DAFUQ?
+		Node<T>* tmp = headRef;
 		headRef = headRef->next;
 		delete tmp;
 	}
@@ -60,20 +61,39 @@ public:
 
 	//Exercise 6
 
+	static void clear(Node<T>*& headRef)
+	{
+		while (headRef != NULL)
+		{
+			headRemove(headRef);
+		}
+	}
+
+	static void print(Node<T>* headPtr)
+	{
+		std::string tmp = "";
+
+		for (Node<T>* cursor = headPtr; cursor != NULL; cursor = cursor->next)
+		{
+			tmp += std::to_string(cursor->info) + " | ";
+		}
+
+		std::cout << "Data in list: " << std::endl << tmp << std::endl;
+	}
+
 	static void reverse(Node<T>*& headRef)
 	{
-		if (headRef == NULL || headRef->next NULL)
+		if (headRef == NULL || headRef->next NULL) //Works? TODO
 		{
 			return;
 		}
 		Node<T>* previous = NULL;
 
-		for (Node<T>* nextElement = sourcePtr->next; nextElement != NULL; nextElement = nextElement->next)
+		for (Node<T>* nextElement = headRef->next; nextElement != NULL; nextElement = nextElement->next)
 		{
 			headRef->next = previous;
 			previous = headRef;
-			headRef = nextElement
-
+			headRef = nextElement;
 		}
 	}
 
@@ -92,6 +112,58 @@ public:
 		}
 
 		return new Node<int>(*(values + (n - 1)), build(values, n - 1));
+	}
+
+	static void join(Node<T>*& headOneRef, Node<T>* headTwoPtr)
+	{
+		Node<T>* cursor = headOneRef;
+		while (cursor->next != NULL)
+		{
+			cursor = cursor->next;
+		}
+		cursor->next = headTwoPtr;
+	}
+
+	static void rotateLeft(Node<T>*& headRef)
+	{
+		if (headRef == NULL)
+		{
+			return;
+		}
+
+		Node<T>* tail = headRef;
+		while (tail->next != NULL)
+		{
+			tail = tail->next;
+		}
+				
+		tail->next = headRef;		
+		headRef = headRef->next;
+		tail->next->next = NULL;
+	}
+
+	static void rotateRight(Node<T>*& headRef)
+	{
+		if (headRef == NULL )
+		{			
+			return;
+		}
+		if (headRef->next == NULL)
+		{
+			return;
+		}
+
+		Node<T>* cursor = headRef;
+		Node<T>* tail = NULL;
+		while (cursor->next->next != NULL)
+		{
+			cursor = cursor->next;
+		}
+
+		tail = cursor->next;
+		tail->next = headRef;
+		cursor->next = NULL;
+		headRef = tail;
 	}
 	
 };
