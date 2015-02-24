@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
-VisualStudioVersion = 12.0.21005.1
+VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Lesson01", "Lesson01", "{19B072A2-E172-433F-857A-FF471BF110C4}"
 EndProject
@@ -37,6 +37,16 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MEFLab", "MEFLab\MEFLab.csproj", "{26A7F439-C6FF-4110-8CAE-E84A9C6CC748}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MEFTester", "MEFTester\MEFTester.csproj", "{B6FFC4EA-0835-43DF-9168-8B08CBC495D3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Lesson", "Lesson", "{5AC61CC5-FB17-4BE0-8EAA-19C39863CAB4}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Lesson08", "Lesson08", "{5672E36A-8811-44B3-83B6-7D9D50A88427}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrismApplication", "PrismApplication\PrismApplication.csproj", "{ADE03623-6E04-4CAF-A60C-1092DB1C6A6C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelloWorldModule", "HelloWorldModule\HelloWorldModule.csproj", "{FB58340D-C644-47E9-B214-F3BD10BC2AEE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrismModules", "PrismModules\PrismModules.csproj", "{BC2EC464-62A5-40C6-845D-4F7074F8FDD4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -156,6 +166,36 @@ Global
 		{B6FFC4EA-0835-43DF-9168-8B08CBC495D3}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{B6FFC4EA-0835-43DF-9168-8B08CBC495D3}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{B6FFC4EA-0835-43DF-9168-8B08CBC495D3}.Release|Win32.ActiveCfg = Release|Any CPU
+		{ADE03623-6E04-4CAF-A60C-1092DB1C6A6C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ADE03623-6E04-4CAF-A60C-1092DB1C6A6C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ADE03623-6E04-4CAF-A60C-1092DB1C6A6C}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{ADE03623-6E04-4CAF-A60C-1092DB1C6A6C}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{ADE03623-6E04-4CAF-A60C-1092DB1C6A6C}.Debug|Win32.ActiveCfg = Debug|Any CPU
+		{ADE03623-6E04-4CAF-A60C-1092DB1C6A6C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ADE03623-6E04-4CAF-A60C-1092DB1C6A6C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ADE03623-6E04-4CAF-A60C-1092DB1C6A6C}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{ADE03623-6E04-4CAF-A60C-1092DB1C6A6C}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{ADE03623-6E04-4CAF-A60C-1092DB1C6A6C}.Release|Win32.ActiveCfg = Release|Any CPU
+		{FB58340D-C644-47E9-B214-F3BD10BC2AEE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FB58340D-C644-47E9-B214-F3BD10BC2AEE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FB58340D-C644-47E9-B214-F3BD10BC2AEE}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{FB58340D-C644-47E9-B214-F3BD10BC2AEE}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{FB58340D-C644-47E9-B214-F3BD10BC2AEE}.Debug|Win32.ActiveCfg = Debug|Any CPU
+		{FB58340D-C644-47E9-B214-F3BD10BC2AEE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FB58340D-C644-47E9-B214-F3BD10BC2AEE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FB58340D-C644-47E9-B214-F3BD10BC2AEE}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{FB58340D-C644-47E9-B214-F3BD10BC2AEE}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{FB58340D-C644-47E9-B214-F3BD10BC2AEE}.Release|Win32.ActiveCfg = Release|Any CPU
+		{BC2EC464-62A5-40C6-845D-4F7074F8FDD4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BC2EC464-62A5-40C6-845D-4F7074F8FDD4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BC2EC464-62A5-40C6-845D-4F7074F8FDD4}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{BC2EC464-62A5-40C6-845D-4F7074F8FDD4}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{BC2EC464-62A5-40C6-845D-4F7074F8FDD4}.Debug|Win32.ActiveCfg = Debug|Any CPU
+		{BC2EC464-62A5-40C6-845D-4F7074F8FDD4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BC2EC464-62A5-40C6-845D-4F7074F8FDD4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BC2EC464-62A5-40C6-845D-4F7074F8FDD4}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{BC2EC464-62A5-40C6-845D-4F7074F8FDD4}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{BC2EC464-62A5-40C6-845D-4F7074F8FDD4}.Release|Win32.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -172,5 +212,8 @@ Global
 		{80EFBC74-A9AA-49B6-BBD9-E25CA19787C6} = {128419CE-815C-4BB0-A382-5766B4B57076}
 		{26A7F439-C6FF-4110-8CAE-E84A9C6CC748} = {C6A4D8D0-B95E-4654-8021-60758C4E4E3B}
 		{B6FFC4EA-0835-43DF-9168-8B08CBC495D3} = {C6A4D8D0-B95E-4654-8021-60758C4E4E3B}
+		{ADE03623-6E04-4CAF-A60C-1092DB1C6A6C} = {5672E36A-8811-44B3-83B6-7D9D50A88427}
+		{FB58340D-C644-47E9-B214-F3BD10BC2AEE} = {5672E36A-8811-44B3-83B6-7D9D50A88427}
+		{BC2EC464-62A5-40C6-845D-4F7074F8FDD4} = {5672E36A-8811-44B3-83B6-7D9D50A88427}
 	EndGlobalSection
 EndGlobal
