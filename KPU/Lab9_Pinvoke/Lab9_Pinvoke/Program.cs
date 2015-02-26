@@ -42,10 +42,10 @@ namespace Lab9_Pinvoke
     {
         static void Main(string[] args)
         {
-            //MessageBeepWrapper.MessageBeep(0);
+            MessageBeepWrapper.MessageBeep(0);
             //BeepWrapper.Beep(750,300);
             //Console.WriteLine(MathWrapper.Add(2, 4));
-            CallBackWrapper.SomeUnmanagedFunctionUsingCallback(2, new CallBackFunction(CallBackWrapper.DoubleX2));
+            //CallBackWrapper.SomeUnmanagedFunctionUsingCallback(2, new CallBackFunction(CallBackWrapper.DoubleX2));
 
             Console.ReadKey();
         }

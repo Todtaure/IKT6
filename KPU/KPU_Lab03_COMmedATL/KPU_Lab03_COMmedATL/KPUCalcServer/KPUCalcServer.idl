@@ -1,0 +1,54 @@
+// KPUCalcServer.idl : IDL source for KPUCalcServer
+//
+
+// This file will be processed by the MIDL tool to
+// produce the type library (KPUCalcServer.tlb) and marshalling code.
+
+import "oaidl.idl";
+import "ocidl.idl";
+
+[
+	object,
+	uuid(6EED39A3-5EBC-4FBF-A2E9-253193589E09),
+	dual,
+	nonextensible,
+	pointer_default(unique)
+]
+interface ICalculator : IDispatch{
+	[id(1)] HRESULT Add([in] LONG arg1, [in] LONG arg2, [out,retval] LONG* result);
+	[id(2)] HRESULT Sub([in] LONG arg1, [in] LONG arg2, [out,retval] LONG* result);
+	[propget, id(3)] HRESULT Offset([out, retval] LONG* pVal);
+	[propput, id(3)] HRESULT Offset([in] LONG newVal);
+};
+[
+	object,
+	uuid(74DF7B5E-F264-4B60-AA82-A2B6D72E1FC1),
+	dual,
+	nonextensible,
+	pointer_default(unique)
+]
+interface IAdvCal : IDispatch{
+	[id(1)] HRESULT Add([in] LONG arg1, [in] LONG arg2, [out,retval] LONG* result);
+	[id(2)] HRESULT Sub([in] LONG arg1, [in] LONG arg2, [out,retval] LONG* result);
+	[propget, id(3)] HRESULT Offset([out, retval] LONG* pVal);
+	[propput, id(3)] HRESULT Offset([in] LONG newVal);
+	[id(4)] HRESULT Mul([in] LONG arg1, [in] LONG arg2, [out,retval] LONG* result);
+	[id(5)] HRESULT Div([in] LONG arg1, [in] LONG arg2, [out,retval] LONG* result);
+};
+[
+	uuid(C6B40429-9249-44AA-ADCC-4AD67D12F825),
+	version(1.0),
+]
+library KPUCalcServerLib
+{
+	importlib("stdole2.tlb");
+	[
+		uuid(75831608-80BE-406E-801C-692EE9CE8E67)		
+	]
+	coclass Calculator
+	{
+		[default] interface ICalculator;
+		interface IAdvCal;
+	};
+};
+

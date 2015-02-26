@@ -1,0 +1,26 @@
+HKCR
+{
+	AU.ASE.KPU.Calculator.1 = s 'Calculator Class'
+	{
+		CLSID = s '{75831608-80BE-406E-801C-692EE9CE8E67}'
+	}
+	AU.ASE.KPU.Calculator = s 'Calculator Class'
+	{		
+		CurVer = s 'AU.ASE.KPU.Calculator.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {75831608-80BE-406E-801C-692EE9CE8E67} = s 'Calculator Class'
+		{
+			ProgID = s 'AU.ASE.KPU.Calculator.1'
+			VersionIndependentProgID = s 'AU.ASE.KPU.Calculator'
+			ForceRemove Programmable
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+			TypeLib = s '{C6B40429-9249-44AA-ADCC-4AD67D12F825}'
+			Version = s '1.0'
+		}
+	}
+}

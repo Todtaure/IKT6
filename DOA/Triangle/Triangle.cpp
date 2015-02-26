@@ -3,6 +3,7 @@
 
 #include "stdafx.h"
 #include <iostream>
+#include <string>
 
 using namespace std;
 
@@ -74,6 +75,43 @@ void bookletPrint(int startPage, int endPage)
 	}
 }
 
+//1. State the problem in terms of its size / complexity
+/* vi får printet mønstret, kompleksitet: n */
+//2. Find, state and handle the base case (BC).
+/* n = 0 */
+//3. Find, state and handle the recursive case (RC)and ensure progress towards the BC
+/*  */
+//4. Ensure that the RC reaches the BC
+//standard helstalsargumentation
+
+void pattern(unsigned int n, unsigned int i)
+{
+	if (n > 0)
+	{		
+		pattern(n/2, i);
+		cout << string(i, ' ');
+		for (int i = 0; i < n; i++)
+		{
+			cout << "* ";
+		}
+		cout << endl;
+		pattern(n/2, n + i);
+		
+	}
+}
+
+//1. State the problem in terms of its size / complexity
+/* længden af telefonnummeret, k */
+//2. Find, state and handle the base case (BC).
+/* k = 0, -> cout << strSoFar*/
+//3. Find, state and handle the recursive case (RC)and ensure progress towards the BC
+/* k > 0, foreach c in phone[0] chars, for hver -> Number(str, phoneNumber[1..k]) */
+//4. Ensure that the RC reaches the BC
+//standard helstalsargumentation
+
+
+
+
 int _tmain(int argc, _TCHAR* argv[])
 {
 	//triangle opgave
@@ -86,7 +124,10 @@ int _tmain(int argc, _TCHAR* argv[])
 	*/
 
 	//Booklet printing
-	bookletPrint(1, 80);
+	//bookletPrint(1, 80);
+
+	//make pattern
+	pattern(8, 0);
 
 	getchar();
 	return 0;
