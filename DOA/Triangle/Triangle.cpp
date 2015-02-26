@@ -120,7 +120,7 @@ void Number(string str, int *phoneNr, int size)
 {
 	if (size > 0)
 	{
-		if (*phoneNr != 0 || *phoneNr != 1)
+		if (*phoneNr != 0 && *phoneNr != 1)
 		{
 			string tmp = str + number[*phoneNr - 2][0];
 			Number(tmp, phoneNr + 1, size - 1);
@@ -173,10 +173,10 @@ int _tmain(int argc, _TCHAR* argv[])
 	fs.open("test.txt", fstream::out | fstream::trunc);	
 	fs.close();
 
-	int test[] = { 2, 2,3 };
+	int test[] = {3,0,9,5,5,2,6,4 };
 	int *test2 = test + 1;
 
-	Number("", test, 3);
+	Number("", test, 8);
 	cout << "Done";
 
 	getchar();
