@@ -4,6 +4,7 @@
 #include "stdafx.h"
 #include <iostream>
 #include <string>
+#include <fstream>
 
 using namespace std;
 
@@ -110,6 +111,42 @@ void pattern(unsigned int n, unsigned int i)
 //standard helstalsargumentation
 
 
+char number[8][4] = { { 'a', 'b', 'c', '\0' }, { 'd', 'e', 'f', '\0' }, 
+						{ 'g', 'h', 'i', '\0' }, { 'j', 'k', 'l', '\0' }, 
+						{ 'm', 'n', 'o', '\0' }, { 'p', 'q', 'r', 's' }, 
+						{ 't', 'u', 'v', '\0' }, { 'w', 'x', 'y', 'z' } };
+
+void Number(string str, int *phoneNr, int size)
+{	
+	if (size > 0)
+	{
+		if (*phoneNr != 0 || *phoneNr != 1)
+		{
+			string tmp = str + number[*phoneNr - 2][0];
+			Number(tmp, phoneNr + 1, size - 1);
+
+			tmp = str + number[*phoneNr - 2][1];
+			Number(tmp, phoneNr + 1, size - 1);
+
+			tmp = str + number[*phoneNr - 2][2];
+			Number(tmp, phoneNr + 1, size - 1);
+
+			if (number[*phoneNr - 2][3] != '\0')
+			{
+				tmp = str + number[*phoneNr - 2][3];
+				Number(tmp, phoneNr + 1, size - 1);
+			}
+		}
+		else
+		{
+			Number(str, phoneNr + 1, size - 1);
+		}
+	}
+	fstream fs;
+	fs.open("test.txt", fstream::out | fstream::app);
+	fs << str << endl;
+	fs.close();	
+}
 
 
 int _tmain(int argc, _TCHAR* argv[])
@@ -127,8 +164,17 @@ int _tmain(int argc, _TCHAR* argv[])
 	//bookletPrint(1, 80);
 
 	//make pattern
-	pattern(8, 0);
+	//pattern(8, 0);
 
+	fstream fs;
+
+	
+	int test[] = { 2,2 };
+	int *test2 = test + 1;
+
+	Number("", test, 2);
+	cout << "Done";
+	
 	getchar();
 	return 0;
 }
