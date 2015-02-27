@@ -88,16 +88,16 @@ void bookletPrint(int startPage, int endPage)
 void pattern(unsigned int n, unsigned int i)
 {
 	if (n > 0)
-	{		
-		pattern(n/2, i);
+	{
+		pattern(n / 2, i);
 		cout << string(i, ' ');
 		for (int i = 0; i < n; i++)
 		{
 			cout << "* ";
 		}
 		cout << endl;
-		pattern(n/2, n + i);
-		
+		pattern(n / 2, n + i);
+
 	}
 }
 
@@ -111,16 +111,16 @@ void pattern(unsigned int n, unsigned int i)
 //standard helstalsargumentation
 
 
-char number[8][4] = { { 'a', 'b', 'c', '\0' }, { 'd', 'e', 'f', '\0' }, 
-						{ 'g', 'h', 'i', '\0' }, { 'j', 'k', 'l', '\0' }, 
-						{ 'm', 'n', 'o', '\0' }, { 'p', 'q', 'r', 's' }, 
-						{ 't', 'u', 'v', '\0' }, { 'w', 'x', 'y', 'z' } };
+char number[8][4] = { { 'a', 'b', 'c', '\0' }, { 'd', 'e', 'f', '\0' },
+{ 'g', 'h', 'i', '\0' }, { 'j', 'k', 'l', '\0' },
+{ 'm', 'n', 'o', '\0' }, { 'p', 'q', 'r', 's' },
+{ 't', 'u', 'v', '\0' }, { 'w', 'x', 'y', 'z' } };
 
 void Number(string str, int *phoneNr, int size)
-{	
+{
 	if (size > 0)
 	{
-		if (*phoneNr != 0 || *phoneNr != 1)
+		if (*phoneNr != 0 && *phoneNr != 1)
 		{
 			string tmp = str + number[*phoneNr - 2][0];
 			Number(tmp, phoneNr + 1, size - 1);
@@ -142,10 +142,13 @@ void Number(string str, int *phoneNr, int size)
 			Number(str, phoneNr + 1, size - 1);
 		}
 	}
-	fstream fs;
-	fs.open("test.txt", fstream::out | fstream::app);
-	fs << str << endl;
-	fs.close();	
+	else
+	{
+		fstream fs;
+		fs.open("test.txt", fstream::out | fstream::app);
+		fs << str << endl;
+		fs.close();
+	}
 }
 
 
@@ -167,14 +170,15 @@ int _tmain(int argc, _TCHAR* argv[])
 	//pattern(8, 0);
 
 	fstream fs;
+	fs.open("test.txt", fstream::out | fstream::trunc);	
+	fs.close();
 
-	
-	int test[] = { 2,2 };
+	int test[] = {3,0,9,5,5,2,6,4 };
 	int *test2 = test + 1;
 
-	Number("", test, 2);
+	Number("", test, 8);
 	cout << "Done";
-	
+
 	getchar();
 	return 0;
 }
