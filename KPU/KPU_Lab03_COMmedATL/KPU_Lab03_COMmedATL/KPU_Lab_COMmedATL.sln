@@ -1,0 +1,70 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "KPUCalcServer", "KPUCalcServer\KPUCalcServer.vcxproj", "{C09417C5-C236-4731-A413-B615BC933117}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "KPUCalcServerPS", "KPUCalcServer\KPUCalcServerPS.vcxproj", "{CF80C13B-F849-4762-9A9A-6AC248E43C6A}"
+	ProjectSection(ProjectDependencies) = postProject
+		{C09417C5-C236-4731-A413-B615BC933117} = {C09417C5-C236-4731-A413-B615BC933117}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SimpelCalcClient", "SimpelCalcClient\SimpelCalcClient.vcxproj", "{10BDE3BF-66C3-418A-A087-B9E63E4011E5}"
+	ProjectSection(ProjectDependencies) = postProject
+		{C09417C5-C236-4731-A413-B615BC933117} = {C09417C5-C236-4731-A413-B615BC933117}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SmartCalcClient", "SmartCalcClient\SmartCalcClient.vcxproj", "{CF4B384F-DB71-427E-9031-449E1ECB5950}"
+	ProjectSection(ProjectDependencies) = postProject
+		{C09417C5-C236-4731-A413-B615BC933117} = {C09417C5-C236-4731-A413-B615BC933117}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SimpelCalcClientV2", "SimpelCalcClientV2\SimpelCalcClientV2.vcxproj", "{D0843ED8-2133-4A2E-A214-6DD67F97406D}"
+	ProjectSection(ProjectDependencies) = postProject
+		{C09417C5-C236-4731-A413-B615BC933117} = {C09417C5-C236-4731-A413-B615BC933117}
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{007F448E-376D-425B-8CE0-3ADF6D6D704F}"
+	ProjectSection(SolutionItems) = preProject
+		ITKPU Lab 3 COM med ATL.pdf = ITKPU Lab 3 COM med ATL.pdf
+		KPU Løsningsforslag ComMedAtl.pdf = KPU Løsningsforslag ComMedAtl.pdf
+		Lab5.html = Lab5.html
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "KPUDynamicClient", "KPUDynamicClient\KPUDynamicClient.vcxproj", "{E98F1ACF-D9A5-4347-B582-35BE9EAF678C}"
+	ProjectSection(ProjectDependencies) = postProject
+		{C09417C5-C236-4731-A413-B615BC933117} = {C09417C5-C236-4731-A413-B615BC933117}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C09417C5-C236-4731-A413-B615BC933117}.Debug|Win32.ActiveCfg = Debug|Win32
+		{C09417C5-C236-4731-A413-B615BC933117}.Debug|Win32.Build.0 = Debug|Win32
+		{C09417C5-C236-4731-A413-B615BC933117}.Release|Win32.ActiveCfg = Release|Win32
+		{C09417C5-C236-4731-A413-B615BC933117}.Release|Win32.Build.0 = Release|Win32
+		{CF80C13B-F849-4762-9A9A-6AC248E43C6A}.Debug|Win32.ActiveCfg = Debug|Win32
+		{CF80C13B-F849-4762-9A9A-6AC248E43C6A}.Release|Win32.ActiveCfg = Release|Win32
+		{10BDE3BF-66C3-418A-A087-B9E63E4011E5}.Debug|Win32.ActiveCfg = Debug|Win32
+		{10BDE3BF-66C3-418A-A087-B9E63E4011E5}.Debug|Win32.Build.0 = Debug|Win32
+		{10BDE3BF-66C3-418A-A087-B9E63E4011E5}.Release|Win32.ActiveCfg = Release|Win32
+		{10BDE3BF-66C3-418A-A087-B9E63E4011E5}.Release|Win32.Build.0 = Release|Win32
+		{CF4B384F-DB71-427E-9031-449E1ECB5950}.Debug|Win32.ActiveCfg = Debug|Win32
+		{CF4B384F-DB71-427E-9031-449E1ECB5950}.Debug|Win32.Build.0 = Debug|Win32
+		{CF4B384F-DB71-427E-9031-449E1ECB5950}.Release|Win32.ActiveCfg = Release|Win32
+		{CF4B384F-DB71-427E-9031-449E1ECB5950}.Release|Win32.Build.0 = Release|Win32
+		{D0843ED8-2133-4A2E-A214-6DD67F97406D}.Debug|Win32.ActiveCfg = Debug|Win32
+		{D0843ED8-2133-4A2E-A214-6DD67F97406D}.Debug|Win32.Build.0 = Debug|Win32
+		{D0843ED8-2133-4A2E-A214-6DD67F97406D}.Release|Win32.ActiveCfg = Release|Win32
+		{D0843ED8-2133-4A2E-A214-6DD67F97406D}.Release|Win32.Build.0 = Release|Win32
+		{E98F1ACF-D9A5-4347-B582-35BE9EAF678C}.Debug|Win32.ActiveCfg = Debug|Win32
+		{E98F1ACF-D9A5-4347-B582-35BE9EAF678C}.Debug|Win32.Build.0 = Debug|Win32
+		{E98F1ACF-D9A5-4347-B582-35BE9EAF678C}.Release|Win32.ActiveCfg = Release|Win32
+		{E98F1ACF-D9A5-4347-B582-35BE9EAF678C}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

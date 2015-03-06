@@ -3,6 +3,8 @@
 
 #include "stdafx.h"
 #include <iostream>
+#include <string>
+#include <fstream>
 
 using namespace std;
 
@@ -74,6 +76,82 @@ void bookletPrint(int startPage, int endPage)
 	}
 }
 
+//1. State the problem in terms of its size / complexity
+/* vi får printet mønstret, kompleksitet: n */
+//2. Find, state and handle the base case (BC).
+/* n = 0 */
+//3. Find, state and handle the recursive case (RC)and ensure progress towards the BC
+/*  */
+//4. Ensure that the RC reaches the BC
+//standard helstalsargumentation
+
+void pattern(unsigned int n, unsigned int i)
+{
+	if (n > 0)
+	{
+		pattern(n / 2, i);
+		cout << string(i, ' ');
+		for (int i = 0; i < n; i++)
+		{
+			cout << "* ";
+		}
+		cout << endl;
+		pattern(n / 2, n + i);
+
+	}
+}
+
+//1. State the problem in terms of its size / complexity
+/* længden af telefonnummeret, k */
+//2. Find, state and handle the base case (BC).
+/* k = 0, -> cout << strSoFar*/
+//3. Find, state and handle the recursive case (RC)and ensure progress towards the BC
+/* k > 0, foreach c in phone[0] chars, for hver -> Number(str, phoneNumber[1..k]) */
+//4. Ensure that the RC reaches the BC
+//standard helstalsargumentation
+
+
+char number[8][4] = { { 'a', 'b', 'c', '\0' }, { 'd', 'e', 'f', '\0' },
+{ 'g', 'h', 'i', '\0' }, { 'j', 'k', 'l', '\0' },
+{ 'm', 'n', 'o', '\0' }, { 'p', 'q', 'r', 's' },
+{ 't', 'u', 'v', '\0' }, { 'w', 'x', 'y', 'z' } };
+
+void Number(string str, int *phoneNr, int size)
+{
+	if (size > 0)
+	{
+		if (*phoneNr != 0 && *phoneNr != 1)
+		{
+			string tmp = str + number[*phoneNr - 2][0];
+			Number(tmp, phoneNr + 1, size - 1);
+
+			tmp = str + number[*phoneNr - 2][1];
+			Number(tmp, phoneNr + 1, size - 1);
+
+			tmp = str + number[*phoneNr - 2][2];
+			Number(tmp, phoneNr + 1, size - 1);
+
+			if (number[*phoneNr - 2][3] != '\0')
+			{
+				tmp = str + number[*phoneNr - 2][3];
+				Number(tmp, phoneNr + 1, size - 1);
+			}
+		}
+		else
+		{
+			Number(str, phoneNr + 1, size - 1);
+		}
+	}
+	else
+	{
+		fstream fs;
+		fs.open("test.txt", fstream::out | fstream::app);
+		fs << str << endl;
+		fs.close();
+	}
+}
+
+
 int _tmain(int argc, _TCHAR* argv[])
 {
 	//triangle opgave
@@ -86,7 +164,20 @@ int _tmain(int argc, _TCHAR* argv[])
 	*/
 
 	//Booklet printing
-	bookletPrint(1, 80);
+	//bookletPrint(1, 80);
+
+	//make pattern
+	//pattern(8, 0);
+
+	fstream fs;
+	fs.open("test.txt", fstream::out | fstream::trunc);	
+	fs.close();
+
+	int test[] = {3,0,9,5,5,2,6,4 };
+	int *test2 = test + 1;
+
+	Number("", test, 8);
+	cout << "Done";
 
 	getchar();
 	return 0;
