@@ -16,8 +16,8 @@ namespace MyLittleService
 {
     public class FileWatcher
     {
-        private string _sourcePath;
-        private string _targetPath;
+        private readonly string _sourcePath;
+        private readonly string _targetPath;
 
         private delegate void WatcherDelegate(string sourcePath);
 
@@ -28,31 +28,34 @@ namespace MyLittleService
             _targetPath = targetPath;
             Wd = new WatcherDelegate(TurnOnWatch);
 
-            if (!Directory.Exists(_sourcePath) || !Directory.Exists(_targetPath))
+            if (!Directory.Exists(_sourcePath) || !File.Exists(_targetPath))
             {
                 return;
             }
+
+            StartToWatch();
         }
 
         public void StartToWatch()
         {
-            Wd.BeginInvoke(_sourcePath, null,null);
+            Wd.BeginInvoke(_sourcePath, null, null);
         }
         private void TurnOnWatch(string sourcePath)
         {
             var watcher = new FileSystemWatcher(sourcePath);
 
-            watcher.Changed += new FileSystemEventHandler(EventHandler);
+            watcher.Filter = "*.txt";
+            watcher.NotifyFilter = NotifyFilters.LastAccess | NotifyFilters.LastWrite | NotifyFilters.FileName;
+            //watcher.Changed += EventHandler;
+            watcher.Created += EventHandler;
+
+            watcher.EnableRaisingEvents = true;
         }
 
         public void EventHandler(object source, FileSystemEventArgs e)
         {
-            if (e.ChangeType != WatcherChangeTypes.Changed)
-            {
-                return;
-            }
             FileStream fsSource = new FileStream(e.FullPath, FileMode.Open, FileAccess.Read);
-            FileStream fsTarget = new FileStream(_targetPath, FileMode.Append, FileAccess.ReadWrite);
+            FileStream fsTarget = new FileStream(_targetPath, FileMode.Append, FileAccess.Write);
 
             try
             {
@@ -86,7 +89,7 @@ namespace MyLittleService
         protected override void OnStart(string[] args)
         {
             eventLog1.WriteEntry("In OnStart");
-            FileWatcher fileWatcher = new FileWatcher(@"C:\tmp", @"C:\targetTmp\tmp.txt");
+            FileWatcher fileWatcher = new FileWatcher(@"C:\tmpSource", @"C:\tmpTarget\tmp.txt");
         }
 
         protected override void OnStop()
